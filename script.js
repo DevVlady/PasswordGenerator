@@ -15,13 +15,25 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
+// Variables
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz0123456789" + "!@#$%&*,.;:";
+
+
+
 
 // Functions
+for (i = 1; i < password.length; i++) {
+  return passwordGenerate
+}
 
 
 
 // Notes
-var confirmCharacters = prompt("How many characters would you like?");
+var numberCharacters = prompt("How many characters would you like?");
 var specilCharacters = confirm("Do you want special characters?");
 var uppercaseCharacters = confirm("Do you want uppercase characters?");
 var lowercaseCharacters = confirm("Do you want lowercase characters?");
+
+if (numberCharacters < 8) {
+  return
+}
