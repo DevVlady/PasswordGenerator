@@ -8,10 +8,6 @@ function writePassword() {
 
   passwordText.value = password;
 
-  for (i = 1; i < characters.length; i++) {
-    alert("Your password is too short..please select between 8 & 125 characters.");
-  }
-
 }
 
 // Add event listener to generate button
@@ -34,14 +30,16 @@ var possibilities = ['A', 'B', 'C', 'D', 'E', 'F', 'H', 'I', 'J', 'K', 'L', 'M',
 
 
 
-// Notes
+// Prompts - Asking the user to select options before generating password based on their specifications
 var numberCharacters = prompt("How many characters would you like?");
 var specilCharacters = confirm("Do you want special characters?");
 var uppercaseCharacters = confirm("Do you want uppercase characters?");
 var lowercaseCharacters = confirm("Do you want lowercase characters?");
 
-// if (numberCharacters < 8) {
-//   return
-// }
 
+// Functions in the works
+
+for (i = 1; i < characters.length; i++) {
+  alert("Your password is too short..please select between 8 & 125 characters.");
+}
 
