@@ -18,3 +18,10 @@ generateBtn.addEventListener("click", writePassword);
 
 // Functions
 
+
+
+// Notes
+var confirmCharacters = prompt("How many characters would you like?");
+var specilCharacters = confirm("Do you want special characters?");
+var uppercaseCharacters = confirm("Do you want uppercase characters?");
+var lowercaseCharacters = confirm("Do you want lowercase characters?");
