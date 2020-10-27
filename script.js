@@ -83,6 +83,17 @@ function generatePassword() {
   else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
     options = special.concat(number, upper);
   }
+
+  //Creating password variable with a blank array
+  var password = [];
+
+  // For function which will allow for random variables to be generated
+  for(var i =0; i < begin; i++) {
+    var selectOptions = options[Math.floor(Math.random() * options.length)];
+    password.push(selectOptions);
+  }
+
+
 }
 
 // Assignment Code - Original
@@ -97,11 +108,9 @@ generateBtn.addEventListener("click", writePassword); {
 // Ran on the console log to see what my result is and what i may need to add
 console.log(writePassword);
 
-// For function which will allow for random variables to be generated
-for(var i =0; i < begin; i++) {
-  var selectOptions = options[Math.floor(Math.random() * options.length)];
-  password.psuh(selectOptions);
-}
+
+
+
 
 
 
