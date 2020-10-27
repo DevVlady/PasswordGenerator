@@ -16,6 +16,16 @@ generateBtn.addEventListener("click", writePassword);
 
 //My code
 
+//My variables
+var numberCharacters;
+var lowerCharacters;
+var specialCharacters;
+var uppercaseCharacters;
+var lowercaseCharacters;
+
+
+
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
