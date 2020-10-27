@@ -65,12 +65,13 @@ function generatePassword() {
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword(); {
+generateBtn.addEventListener("click", writePassword); {
   password = generatePassword();
   passwordText = document.querySelector("#password");
-});
+};
 
-
+// Ran on the console log to see what my result is and what i may need to add
+console.log(writePassword);
 
 
 
