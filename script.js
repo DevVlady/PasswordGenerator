@@ -2,13 +2,13 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input - Original
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
 // Add event listener to generate button - Original
 generateBtn.addEventListener("click", writePassword);
@@ -26,12 +26,17 @@ generateBtn.addEventListener('click', () => {
     hasUpper,
     hasSymbols,
     hasNumbers,
-    length
+    length,
     );
 });
 
 // Generate password function
-function generatePassword(lower, upper, symbols, numbers, length) {
+function generatePassword(lower, upper, symbols, numbers, length,) {
+
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 
   let generatePassword = "";
   var typesCount = lower + upper + symbols + numbers + length;
@@ -49,7 +54,13 @@ function generatePassword(lower, upper, symbols, numbers, length) {
     return '';
   }
 
-  
+  for(let i =0; i < length; i += typesCount) {
+    typesArr.forEach(type => {
+      var funcName = Object.keys(type)[0];
+
+      generatePassword += randomFunc[funcName]();
+    })
+  }
 
 }
 
@@ -89,12 +100,12 @@ var lowercaseCharacters = confirm("Do you want lowercase characters?");
 
 
 //Generator Functions
-// const randomFunc {
-//   lower: getRandomLower,
-//   upper: getRandomUpper,
-//   number: getRandomNumber,
-//   symbol: getRandomSymbol,
-// }
+const randomFunc {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  numbers: getRandomNumber,
+  symbols: getRandomSymbol,
+}
 
 
 
