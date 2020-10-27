@@ -26,20 +26,37 @@ var lowerCharacters;
 //My arrays
 var begin = "";
 number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", "?", "+", "`"]
+lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", "?", "+", "`"];
 
 
+// Function that generates feedback based on what the user selects.
 
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+function generatePassword() {
 
-  passwordText.value = password;
+  begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
 
+  while (begin < 8 || begin > 129) {
+    alert("Please enter a vlaid length & try again!");
+    begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
+  }
+
+  if (!begin) {
+    alert("A value is needed in order to continue!");
+  }
+
+  else {
+    numberCharacters = confirm("Would you like numbers included in your password?");
+    specialCharacters = confirm("Would you like special characters included in your password?");
+    upperCharacters = confirm("Would you like uppercase letters included in your password?");
+    lowerCharacters = confirm("Would you like lowercase letters included in your password?");
+  }
+  while (numberCharacters === false && specialCharacters === false && upperCharacters === false && lowerCharacters === false) {
+    alert("Error! Please select at least one of the of following options.");
+    begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
+  }
 }
-
 
 
 
@@ -194,6 +211,3 @@ function writePassword() {
 // console.log(getRandomLower());
 // console.log(getRandomUpper());
 // console.log(getRandomSymbols());
-
-
-// Changed generatePassword to writePassword
