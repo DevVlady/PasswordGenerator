@@ -1,7 +1,7 @@
-// Assignment Code
+// Assignment Code - Original
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// Write password to the #password input - Original
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -10,8 +10,16 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// Add event listener to generate button - Original
 generateBtn.addEventListener("click", writePassword);
+
+// Re-write the "add event listener to generate button" line above - Vlad
+generateBtn.addEventListener('click', () => {
+  var #generate = generateBtn.value;
+
+  console.log(#generate);
+})
+
 
 
 // My work below this line
@@ -37,11 +45,14 @@ generateBtn.addEventListener("click", writePassword);
 // var lowercaseCharacters = confirm("Do you want lowercase characters?");
 
 
+
 // Functions in the works
 
 // for (i = 1; i < characters.length; i++) {
 //   alert("Your password is too short..please select between 8 & 125 characters.");
 // }
+
+
 
 //Generator Functions
 // const randomFunc {
@@ -50,6 +61,7 @@ generateBtn.addEventListener("click", writePassword);
 //   number: getRandomNumber,
 //   symbol: getRandomSymbol,
 // }
+
 
 
 // Generate a random number
