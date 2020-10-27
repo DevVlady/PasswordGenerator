@@ -26,19 +26,19 @@ generateBtn.addEventListener('click', () => {
     hasUpper,
     hasSymbols,
     hasNumbers,
-    length,
+    length
     );
 });
 
 // Generate password function
-function generatePassword(lower, upper, symbols, numbers, length,) {
+function writePassword(lower, upper, symbols, numbers, length) {
 
-  var password = generatePassword();
+  var password = writePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-  let generatePassword = "";
+  let writePassword = "";
   var typesCount = lower + upper + symbols + numbers + length;
 
   console.log('typesCount: ', typesCount);
@@ -57,11 +57,13 @@ function generatePassword(lower, upper, symbols, numbers, length,) {
   for(let i =0; i < length; i += typesCount) {
     typesArr.forEach(type => {
       var funcName = Object.keys(type)[0];
+      console.log('funcName: ', funcName);
 
-      generatePassword += randomFunc[funcName]();
-    })
+      writePassword += randomFunc[funcName]();
+    });
   }
 
+  console.log(writePassword);
 }
 
 
@@ -100,11 +102,11 @@ var lowercaseCharacters = confirm("Do you want lowercase characters?");
 
 
 //Generator Functions
-const randomFunc {
+var randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
   numbers: getRandomNumber,
-  symbols: getRandomSymbol,
+  symbols: getRandomSymbol
 }
 
 
