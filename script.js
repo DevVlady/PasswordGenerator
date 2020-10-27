@@ -15,10 +15,14 @@ generateBtn.addEventListener("click", writePassword);
 
 // Re-write the "add event listener to generate button" line above - Vlad
 generateBtn.addEventListener('click', () => {
-  var #generate = generateBtn.value;
+  var length = lengthCharacters.value
+  var hasLower = lowercaseCharacters.confirm;
+  var hasUpper = uppercaseCharacters.confirm;
+  var hasSymbols = specialCharacters.confirm;
+  var hasNumbers = numberCharacters.prompt;
 
-  console.log(#generate);
-})
+  generatePassword(hasLower, hasUpper, hasSymbols, hasNumbers, length);
+});
 
 
 
@@ -39,10 +43,12 @@ generateBtn.addEventListener('click', () => {
 
 
 // Prompts - Asking the user to select options before generating password based on their specifications
-// var numberCharacters = prompt("How many characters would you like?");
-// var specilCharacters = confirm("Do you want special characters?");
-// var uppercaseCharacters = confirm("Do you want uppercase characters?");
-// var lowercaseCharacters = confirm("Do you want lowercase characters?");
+var lengthCharacters = prompt("How many characters would you like?");
+var numberCharacters = confirm("Do you want numbers?");
+var specialCharacters = confirm("Do you want special characters?");
+var uppercaseCharacters = confirm("Do you want uppercase characters?");
+var lowercaseCharacters = confirm("Do you want lowercase characters?");
+
 
 
 
@@ -80,14 +86,14 @@ function getRandomUpper() {
 }
 
 // Generate random special character
-function getRandomSymbol() {
-  const symbols = '~`!#$%^&*+=-[]\';,/{}|\":<>?';
+function getRandomSymbols() {
+  var symbols = '~`!#$%^&*+=-[]\';,/{}|\":<>?';
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 // Used function to check if my functions work properly and they do
-console.log(getRandomNumber());
-console.log(getRandomLower());
-console.log(getRandomUpper());
-console.log(getRandomSymbol());
+// console.log(getRandomNumber());
+// console.log(getRandomLower());
+// console.log(getRandomUpper());
+// console.log(getRandomSymbols());
 
