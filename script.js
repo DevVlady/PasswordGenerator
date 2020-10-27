@@ -67,49 +67,6 @@ function writePassword() {
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
   }
-    //If 3 out of the 4 options are selected
-  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
-    options = number.concat(special, upper);
-  }
-
-  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
-    options = number.concat(special, lower);
-  }
-
-  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
-    options = number.concat(special, upper);
-  }
-
-  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
-    options = special.concat(number, upper);
-  }
-
-  //Creating password variable with a blank array
-  var password = [];
-
-  // For function which will allow for random variables to be generated
-  for(var i =0; i < begin; i++) {
-    var selectOptions = options[Math.floor(Math.random() * options.length)];
-    password.push(selectOptions);
-  }
-
-  //Creating a random variable and
-
-
-}
-
-// Assignment Code - Original
-var generateBtn = document.querySelector("#generate");
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); {
-  password = generatePassword();
-  passwordText = document.querySelector("#password");
-};
-
-// Ran on the console log to see what my result is and what i may need to add
-console.log(writePassword);
-
 
 
 
