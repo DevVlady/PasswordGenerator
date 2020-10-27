@@ -36,13 +36,14 @@ function generatePassword() {
 
   begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
 
-  while (begin < 8 || begin > 129) {
-    alert("Please enter a vlaid length & try again!");
-    begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
-  }
-
   if (!begin) {
     alert("A value is needed in order to continue!");
+  }
+
+  else if (begin < 8 || begin > 129) {
+    //Checks users input to ensure it meet criteria
+    alert("Please enter a vlaid length & try again!");
+    begin = parseInt(prompt("Please enter a number between 8 & 129"));
   }
 
   else {
@@ -72,6 +73,12 @@ generateBtn.addEventListener("click", writePassword); {
 
 // Ran on the console log to see what my result is and what i may need to add
 console.log(writePassword);
+
+// Function used to generate password
+function generatePassword () {
+  //User input
+  enter = parseInt(prompt)
+}
 
 
 
