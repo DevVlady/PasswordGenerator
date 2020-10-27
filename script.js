@@ -1,12 +1,17 @@
+// Add event listener to generate button - Original
+// generateBtn.addEventListener("click", writePassword);
+
+// Assignment Code - Original
+// var generateBtn = document.querySelector("#generate");
+
 // Write password to the #password input - Original
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
-
 
 //My code
 
@@ -59,10 +64,13 @@ function generatePassword() {
 // Assignment Code - Original
 var generateBtn = document.querySelector("#generate");
 
-// Add event listener to generate button - Original
-generateBtn.addEventListener("click", writePassword()); {
-  
-}
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword(); {
+  password = generatePassword();
+  passwordText = document.querySelector("#password");
+});
+
+
 
 
 
