@@ -21,9 +21,25 @@ generateBtn.addEventListener('click', () => {
   var hasSymbols = specialCharacters.confirm;
   var hasNumbers = numberCharacters.prompt;
 
-  generatePassword(hasLower, hasUpper, hasSymbols, hasNumbers, length);
+  generateBtn.innerText = generatePassword(
+    hasLower,
+    hasUpper,
+    hasSymbols,
+    hasNumbers,
+    length
+    );
 });
 
+// Generate password function
+function generatePassword(lower, upper, symbols, numbers, length) {
+
+  let generatePassword = "";
+  var typesCount = lower + upper + symbols + numbers + length;
+
+  console.log('typesCount: ', typesCount);
+
+  var typesArr
+}
 
 
 // My work below this line
