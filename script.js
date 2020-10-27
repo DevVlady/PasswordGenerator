@@ -13,7 +13,7 @@ function writePassword() {
 
 }
 
-//My code
+//My code....................................................................................
 
 //My variables
 var numberCharacters;
@@ -21,6 +21,7 @@ var specialCharacters;
 var upperCharacters;
 var lowerCharacters;
 var options;
+var password;
 
 
 //My arrays
@@ -96,7 +97,11 @@ generateBtn.addEventListener("click", writePassword); {
 // Ran on the console log to see what my result is and what i may need to add
 console.log(writePassword);
 
-
+// For function which will allow for random variables to be generated
+for(var i =0; i < begin; i++) {
+  var selectOptions = options[Math.floor(Math.random() * options.length)];
+  password.push(selectOptions);
+}
 
 
 
@@ -167,7 +172,7 @@ console.log(writePassword);
 //     return '';
 //   }
 
-//   for(let i =0; i < length; i += typesCount) {
+//   for(let i =0; i < begin; i++) {
 //     typesArr.forEach(type => {
 //       var funcName = Object.keys(type)[0];
 //       console.log('funcName: ', funcName);
