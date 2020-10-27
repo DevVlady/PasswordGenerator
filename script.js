@@ -61,13 +61,14 @@ function getRandomUpper() {
 }
 
 // Generate random special character
-function getRandomSpecial() {
-  return String.fromCharCode(Math.floor(Math.random() * 15) + 33);
+function getRandomSymbol() {
+  const symbols = '~`!#$%^&*+=-[]\';,/{}|\":<>?';
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 // Used function to check if my functions work properly and they do
 console.log(getRandomNumber());
 console.log(getRandomLower());
 console.log(getRandomUpper());
-console.log(getRandomSpecial());
+console.log(getRandomSymbol());
 
