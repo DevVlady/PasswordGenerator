@@ -21,7 +21,7 @@ var specialCharacters;
 var upperCharacters;
 var lowerCharacters;
 var options;
-var password;
+var password = [];
 
 
 //My arrays
@@ -100,7 +100,7 @@ console.log(writePassword);
 // For function which will allow for random variables to be generated
 for(var i =0; i < begin; i++) {
   var selectOptions = options[Math.floor(Math.random() * options.length)];
-  password.push(selectOptions);
+  password.psuh(selectOptions);
 }
 
 
