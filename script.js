@@ -1,19 +1,19 @@
 // Add event listener to generate button - Original
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 
 // Assignment Code - Original
-// var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input - Original
 function writePassword() {
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-//My code....................................................................................
+//My code below....................................................................................
 
 //My variables
 var numberCharacters;
