@@ -20,6 +20,7 @@ var numberCharacters;
 var specialCharacters;
 var upperCharacters;
 var lowerCharacters;
+var options;
 
 
 //My arrays
@@ -35,25 +36,27 @@ special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", "?",
 function generatePassword() {
 
   begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
-
+  // If statement below will prompt alert mesaage if no value is entered.
   if (!begin) {
     alert("A value is needed in order to continue!");
   }
 
   else if (begin < 8 || begin > 129) {
-    //Checks users input to ensure it meet criteria
+    //Checks users input to ensure it meets criteria
     alert("Please enter a vlaid length & try again!");
     begin = parseInt(prompt("Please enter a number between 8 & 129"));
   }
 
   else {
+    //If user enters numbers within the criteria then the alerts below will appear one after the other.
     numberCharacters = confirm("Would you like numbers included in your password?");
     specialCharacters = confirm("Would you like special characters included in your password?");
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
-  }
-  while (numberCharacters === false && specialCharacters === false && upperCharacters === false && lowerCharacters === false) {
-    alert("Error! Please select at least one of the of following options.");
+  };
+
+  else (!numberCharacters && !specialCharacters && !upperCharacters && !lowerCharacters) {
+    options = alert("Error! Please select at least one of the of following options.");
     numberCharacters = confirm("Would you like numbers included in your password?");
     specialCharacters = confirm("Would you like special characters included in your password?");
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
