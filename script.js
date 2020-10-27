@@ -44,6 +44,13 @@ generateBtn.addEventListener("click", writePassword);
 // }
 
 //Generator Functions
+// const randomFunc {
+//   lower: getRandomLower,
+//   upper: getRandomUpper,
+//   number: getRandomNumber,
+//   symbol: getRandomSymbol,
+// }
+
 
 // Generate a random number
 function getRandomNumber() {
