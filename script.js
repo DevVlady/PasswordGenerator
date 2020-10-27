@@ -15,13 +15,15 @@ generateBtn.addEventListener("click", writePassword);
 
 // Re-write the "add event listener to generate button" line above - Vlad
 generateBtn.addEventListener('click', () => {
-  var length = lengthCharacters.value
+  // var length = lengthCharacters.value
   var hasLower = lowercaseCharacters.confirm;
   var hasUpper = uppercaseCharacters.confirm;
   var hasSymbols = specialCharacters.confirm;
   var hasNumbers = numberCharacters.prompt;
+  var password = passwordText.value;
+  passwordText.value = password;
 
-  generateBtn.innerText = generatePassword(
+  generateBtn.innerText = writePassword(
     hasLower,
     hasUpper,
     hasSymbols,
@@ -36,7 +38,6 @@ function writePassword(lower, upper, symbols, numbers, length) {
   var password = writePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
   let writePassword = "";
   var typesCount = lower + upper + symbols + numbers + length;
@@ -63,7 +64,9 @@ function writePassword(lower, upper, symbols, numbers, length) {
     });
   }
 
-  console.log(writePassword);
+  var finalPassword = writePassword.slice(0, length);
+
+  return finalPassword;
 }
 
 
@@ -106,7 +109,7 @@ var randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
   numbers: getRandomNumber,
-  symbols: getRandomSymbol
+  // symbols: getRandomSymbol
 }
 
 
@@ -133,8 +136,10 @@ function getRandomSymbols() {
 }
 
 // Used function to check if my functions work properly and they do
-// console.log(getRandomNumber());
-// console.log(getRandomLower());
-// console.log(getRandomUpper());
-// console.log(getRandomSymbols());
+console.log(getRandomNumber());
+console.log(getRandomLower());
+console.log(getRandomUpper());
+console.log(getRandomSymbols());
 
+
+// Changed generatePassword to writePassword
