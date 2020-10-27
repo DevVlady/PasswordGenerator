@@ -54,7 +54,11 @@ function generatePassword() {
   }
   while (numberCharacters === false && specialCharacters === false && upperCharacters === false && lowerCharacters === false) {
     alert("Error! Please select at least one of the of following options.");
-    begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 129"));
+    numberCharacters = confirm("Would you like numbers included in your password?");
+    specialCharacters = confirm("Would you like special characters included in your password?");
+    upperCharacters = confirm("Would you like uppercase letters included in your password?");
+    lowerCharacters = confirm("Would you like lowercase letters included in your password?");
+
   }
 }
 
