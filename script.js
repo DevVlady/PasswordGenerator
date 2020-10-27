@@ -45,6 +45,10 @@ function generatePassword() {
     //Checks users input to ensure it meets criteria
     alert("Please enter a vlaid length & try again!");
     begin = parseInt(prompt("Please enter a number between 8 & 129"));
+    numberCharacters = confirm("Would you like numbers included in your password?");
+    specialCharacters = confirm("Would you like special characters included in your password?");
+    upperCharacters = confirm("Would you like uppercase letters included in your password?");
+    lowerCharacters = confirm("Would you like lowercase letters included in your password?");
   }
 
   else {
@@ -55,13 +59,28 @@ function generatePassword() {
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
   };
 
-  else (!numberCharacters && !specialCharacters && !upperCharacters && !lowerCharacters) {
+  if (!numberCharacters && !specialCharacters && !upperCharacters && !lowerCharacters) {
     options = alert("Error! Please select at least one of the of following options.");
     numberCharacters = confirm("Would you like numbers included in your password?");
     specialCharacters = confirm("Would you like special characters included in your password?");
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
+  }
+    //If 3 out of the 4 options are selected
+  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
+    options = number.concat(special, upper);
+  }
 
+  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
+    options = number.concat(special, lower);
+  }
+
+  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
+    options = number.concat(special, upper);
+  }
+
+  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
+    options = special.concat(number, upper);
   }
 }
 
@@ -77,11 +96,6 @@ generateBtn.addEventListener("click", writePassword); {
 // Ran on the console log to see what my result is and what i may need to add
 console.log(writePassword);
 
-// Function used to generate password
-function generatePassword () {
-  //User input
-  enter = parseInt(prompt)
-}
 
 
 
