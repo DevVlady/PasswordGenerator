@@ -1,8 +1,8 @@
-// Add event listener to generate button - Original
-generateBtn.addEventListener("click", writePassword);
-
 // Assignment Code - Original
 var generateBtn = document.querySelector("#generate");
+
+// Add event listener to generate button - Original
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input - Original
 function writePassword() {
@@ -10,6 +10,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
 
 }
 
@@ -67,6 +68,22 @@ function writePassword() {
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
   }
+
+  //Creating the for variable whcih will help when generating random password
+  // for (var i = 0)
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
