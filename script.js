@@ -2,14 +2,14 @@
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button - Original
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword); //Ask about what type of function should go into the parenthesis
 
 // Write password to the #password input - Original
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password; //Should this value be value = passwordText.value instead????
 
 
 }
@@ -35,7 +35,14 @@ var special = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", 
 
 // Function that generates feedback based on what the user selects.
 
-function writePassword() {
+function writePassword(passwordText) {
+  //Copied the function section that is given above
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
+
+
+  passwordText.value = password;
+
   //Will prompt a filed to enter a number of characters user would like
   begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 128"));
 
@@ -128,14 +135,22 @@ function writePassword() {
      password.push(selectOptions);
   }
 
-  
-
-
-
 
 
 }
 
+
+//Function that will provide ransom characters based on selection by user
+
+generateBtn.addEventListener("click", writePassword); {
+  //Created a variable password that will generate using the variables in the parenthesis
+  var password = generatePassword(number, special, upper, lower);
+  var passwordText = document.querySelector("#password");
+  //
+  password.innerText = password;
+
+
+}
 
 
 
