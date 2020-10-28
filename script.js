@@ -117,9 +117,8 @@ function writePassword() {
     options = (lower);
   }
 
-  
-
-
+  //Adding the the password variable with an empty array
+  var password = [""];
 
   //Code Works up until the lines below**************
 
@@ -129,16 +128,7 @@ function writePassword() {
      password.push(selectOptions);
   }
 
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
