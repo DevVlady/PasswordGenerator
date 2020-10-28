@@ -70,9 +70,21 @@ function writePassword() {
   }
   else if (numberCharacters && specialCharacters && upperCharacters) {
     //This prompt will populate if only 3 of the 4 options are selected
-    options = number.concat(special, upper)
+    options = number.concat(special, upper);
   }
-  
+  else if (numberCharacters && specialCharacters && lowerCharacters) {
+    //Another prompt if the user selects less then 4 options
+    options = number.concat(special, lower);
+  }
+  else if (numberCharacters && lowerCharacters && upperCharacters) {
+    //If 3 options are selected it will prompt this as one of the options
+    options = number.concat(lower, upper);
+  }
+  else if (specialCharacters && lowerCharacters && upperCharacters) {
+    //Another prompt for if 3 of the 4 options are selected
+    options = special.concat(lower, upper);
+  }
+  //All my prompts if the user selects only 2 options
 
 
 
