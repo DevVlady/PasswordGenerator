@@ -104,8 +104,20 @@ function writePassword() {
     options = number.concat(upper);
   }
   //The prompts below are for if the user seelcts only one of the four options
-  
+  else if (numberCharacters) {
+    options = (number);
+  }
+  else if (specialCharacters) {
+    options = (special);
+  }
+  else if (upperCharacters) {
+    options = (upper);
+  }
+  else if (lowerCharacters) {
+    options = (lower);
+  }
 
+  
 
 
 
