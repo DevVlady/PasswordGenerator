@@ -64,15 +64,26 @@ function writePassword() {
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
   }
+  else if (numberCharacters && specialCharacters && upperCharacters && lowerCharacters) {
+    //This function will prompt if the user selects all four of the options provided
+    options = number.concat(special, upper, lower);
+  }
+  else if (numberCharacters && specialCharacters && upperCharacters) {
+    //This prompt will populate if only 3 of the 4 options are selected
+    options = number.concat(special, upper)
+  }
+  
+
+
 
 
   //Code Works up until the lines below**************
 
   //Creating the for variable whcih will help when generating random variables
-  // for (var i = 0; i < begin; i++) {
-  //    var selectOptions = options[Math.floor(Math.random() * options.length)];
-  //    password.push(selectOptions);
-  // }
+  for (var i = 0; i < begin; i++) {
+     var selectOptions = options[Math.floor(Math.random() * options.length)];
+     password.push(selectOptions);
+  }
 
 
 
