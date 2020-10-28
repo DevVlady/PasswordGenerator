@@ -85,6 +85,26 @@ function writePassword() {
     options = special.concat(lower, upper);
   }
   //All my prompts if the user selects only 2 options
+  else if (specialCharacters && numberCharacters) {
+    options = special.concat(number);
+  }
+  else if (specialCharacters && lowerCharacters) {
+    options = special.concat(lower);
+  }
+  else if (specialCharacters && upperCharacters) {
+    options = special.concat(upper);
+  }
+  else if (lowerCharacters && numberCharacters) {
+    options = lower.concat(number);
+  }
+  else if (lowerCharacters && upperCharacters) {
+    options = lower.concat(upper);
+  }
+  else if (numberCharacters && upperCharacters) {
+    options = number.concat(upper);
+  }
+  //The prompts below are for if the user seelcts only one of the four options
+  
 
 
 
