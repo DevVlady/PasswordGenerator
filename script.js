@@ -39,16 +39,15 @@ function writePassword() {
   //Will prompt a filed to enter a number of characters user would like
   begin = parseInt(prompt("How many characters would you like? Please enter a number between 8 & 128"));
 
+  if (!begin) {
+    //WIll prompt the message below if user decides to escape the input field
+    alert("A value is needed in order to conitnue!")
+  }
 
-  while  (begin < 8 || begin > 128) {
+  else if  (begin < 8 || begin > 128) {
     //Checks users input to ensure it meets criteria...will prompt message if criteria is not met
     alert("Please enter a vlaid length & try again!");
     begin = parseInt(prompt("Please enter a number between 8 & 128"));
-  }
-
-  if (!begin) {
-    //WIll prompt the message below if user decides to escape the input field
-    alert("Please enter a value to conitnue!")
   }
   else {
     //Will prompt the field criteria if user enters values with the parameters
@@ -57,7 +56,7 @@ function writePassword() {
     upperCharacters = confirm("Would you like uppercase letters included in your password?");
     lowerCharacters = confirm("Would you like lowercase letters included in your password?");
   }
-  while (!numberCharacters && !specialCharacters && !upperCharacters && !lowerCharacters) {
+  if (!numberCharacters && !specialCharacters && !upperCharacters && !lowerCharacters) {
     //If no options are seelcted then it will prompt the message below
     options = alert("Error! Please select at least one of the of following options.");
     numberCharacters = confirm("Would you like numbers included in your password?");
@@ -69,11 +68,15 @@ function writePassword() {
 
   //Code Works up until the lines below**************
 
-
-  //Creating the for variable whcih will help when generating random password
+  //Creating the for variable whcih will help when generating random variables
   // for (var i = 0; i < begin; i++) {
-
+  //    var selectOptions = options[Math.floor(Math.random() * options.length)];
+  //    password.push(selectOptions);
   // }
+
+
+
+
 
 
 
