@@ -10,8 +10,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-
 }
 
 //My code below....................................................................................
@@ -74,25 +72,25 @@ function generatePassword() {
     // var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
     answers.confirmNumbers = true;
     passphrase = passphrase.concat(numberCharacters);
-    console.log(passphrase);
+    console.log(confirmNumbers);
   }
   if (confirmUppercase) {
     // var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
     answers.confirmUppercase = true;
     passphrase = passphrase.concat(uppercaseCharacters);
-    console.log(passphrase);
+    console.log(confirmUppercase);
   }
   if (confirmLowercase) {
     // var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
     answers = confirmLowercase = true;
     passphrase = passphrase.concat(lowercaseCharacters);
-    console.log(passphrase);
+    console.log(confirmLowercase);
   }
   if (confirmSpecial) {
     // var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
     answers = confirmSpecial = true;
     passphrase = passphrase.concat(specialCharacters);
-    console.log(passphrase);
+    console.log(confirmSpecial);
   }
   //For loop in order for this function to wrap around based on the user response
   for (var i = 0; i < userLen; i++) {
