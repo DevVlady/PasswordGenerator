@@ -5,14 +5,14 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword); //Ask about what type of function should go into the parenthesis
 
 // Write password to the #password input - Original
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
 
-// }
+}
 
 //My code below....................................................................................
 
@@ -33,7 +33,7 @@ var passphrase = "";
 
 
 //My arrays & empty arrys that will store my responses
-var choices = "";
+// var choices = "";
 var userChoice;
 var numberCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
