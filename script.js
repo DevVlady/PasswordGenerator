@@ -50,6 +50,12 @@ function writePassword() {
   //Creating the equation that will prompt the user to input a value
   var userChoice = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
 
+  //My variables that store the users response
+  var confirmNumbers = confirm("Would you like to include numbers in your password?");
+  var confirmUppercase = confirm("Would you like to include uppercase letters in your password?");
+  var confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
+  var confirmSpecial = confirm("Would you like to include special characters in your password?");
+
 
   //If statements that will generate based on the selection of the user
   if (confirmNumbers) {
