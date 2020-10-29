@@ -5,14 +5,14 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword); //Ask about what type of function should go into the parenthesis
 
 // Write password to the #password input - Original
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password; //Should this value be value = passwordText.value instead????
+//   passwordText.value = password; //Should this value be value = passwordText.value instead????
 
 
-}
+// }
 
 //My code below....................................................................................
 
@@ -33,6 +33,16 @@ var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"
 var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var specialCharacters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ",", ".", "?", "+", "`"];
 
+
+//The function used to generate the password
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password; //Should this value be value = passwordText.value instead????
+
+
+}
 
 
 
