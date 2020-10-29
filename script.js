@@ -50,10 +50,7 @@ function writePassword() {
   //Creating the equation that will prompt the user to input a value
   var userChoice = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
 
-  //For loop in order for this function to wrap around based on the user response
-  for (var i = 0; i < userChoice; i++) {
 
-  }
   //If statements that will generate based on the selection of the user
   if (confirmNumbers) {
     var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
@@ -67,6 +64,12 @@ function writePassword() {
   if (confirmSpecial) {
     var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
   }
+  //For loop in order for this function to wrap around based on the user response
+  for (var i = 0; i < userChoice; i++) {
+
+  }
+  //Adding the return after the loop in order to return our value
+  return choices;
 
 
 
