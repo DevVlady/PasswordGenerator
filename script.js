@@ -16,6 +16,18 @@ function writePassword() {
 
 //My code below....................................................................................
 
+//My NEW & OFFICIAL code
+
+//My variables ....Confirmed
+var confirmNumbers;
+var confirmUppercase;
+var confirmLowercase;
+var confirmSpecial;
+
+
+
+
+
 
 
 
