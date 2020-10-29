@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button - Original
-generateBtn.addEventListener("click", writePassword); //Ask about what type of function should go into the parenthesis
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input - Original
 function writePassword() {
@@ -29,12 +29,18 @@ var numbersRandom;
 var uppercaseRandom;
 var lowercaseRandom;
 var specialRandom;
-var passphrase = "";
+var passphrase = [];
+var tempArray = [];
 
 
 //My arrays & empty arrys that will store my responses
 // var choices = "";
-var answers = [""];
+var answers = {
+confirmNumbers:confirmNumbers,
+confirmLowercase:confirmLowercase,
+confirmUppercase:confirmUppercase,
+confirmSpecial:confirmSpecial,
+}
 var numberCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -44,12 +50,20 @@ var specialCharacters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", 
 //The function used to generate the password
 function generatePassword() {
   // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password");
 
-  // passwordText.value = password; //Should this value be value = passwordText.value instead????
+  passwordText.value = password;
 
   //Creating the equation that will prompt the user to input a value
   var userLen = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
+
+ //If none of the criteria are selected return alert with message
+  if  (userLen < 8 || userLen > 128) {
+    //Checks users input to ensure it meets criteria...will prompt message if criteria is not met
+    alert("Please enter a vlaid length & try again!");
+    userLen = parseInt(prompt("Please enter a number between 8 & 128 & try again"));
+    console.log(userLen);
+  }
 
   //My variables that store the users response
   confirmNumbers = confirm("Would you like to include numbers in your password?");
@@ -57,39 +71,40 @@ function generatePassword() {
   confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
   confirmSpecial = confirm("Would you like to include special characters in your password?");
 
-
-  //If statements that will generate based on the selection of the user
-
-  if  (begin < 8 || begin > 128) {
-  //Checks users input to ensure it meets criteria...will prompt message if criteria is not met
-  alert("Please enter a vlaid length & try again!");
-  userLen = parseInt(prompt("Please enter a number between 8 & 128 & try again"));
-  }
-
   if (confirmNumbers) {
     // var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
-    answers = confirmNumbers;
+    answers.confirmNumbers = true;
+    passphrase = passphrase.concat(numberCharacters);
+    console.log(passphrase);
   }
   if (confirmUppercase) {
     // var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
-    answers = confirmUppercase;
+    answers.confirmUppercase = true;
+    passphrase = passphrase.concat(uppercaseCharacters);
+    console.log(passphrase);
   }
   if (confirmLowercase) {
     // var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
-    answers = confirmLowercase;
+    answers = confirmLowercase = true;
+    passphrase = passphrase.concat(lowercaseCharacters);
+    console.log(passphrase);
   }
   if (confirmSpecial) {
     // var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
-    answers = confirmSpecial;
+    answers = confirmSpecial = true;
+    passphrase = passphrase.concat(specialCharacters);
+    console.log(passphrase);
   }
   //For loop in order for this function to wrap around based on the user response
   for (var i = 0; i < userLen; i++) {
-    var randomPassword = Math.floor(Math.random() * answers.length);
-    passphrase.push=+answers[randomPassword];
+    var index = Math.floor(Math.random() * passphrase.length);
+    tempArray.push(passphrase[index]);
 
   }
+  let temp2 = tempArray.join("");
+  console.log(temp2);
   //Adding the return after the loop in order to return our value
-  return passphrase;
+  return answers = temp2;
 
 
 
