@@ -58,6 +58,15 @@ function writePassword() {
   if (confirmNumbers) {
     var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
   }
+  if (confirmUppercase) {
+    var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
+  }
+  if (confirmLowercase) {
+    var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
+  }
+  if (confirmSpecial) {
+    var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
+  }
 
 
 
