@@ -21,6 +21,7 @@ var confirmNumbers;
 var confirmUppercase;
 var confirmLowercase;
 var confirmSpecial;
+var askQuestions
 
 //My variables created for the random functions in the if statements
 var numbersRandom;
@@ -63,6 +64,7 @@ function generatePassword() {
   }
 
   //My variables that store the users response
+  if (askQuestions) {}
   confirmNumbers = confirm("Would you like to include numbers in your password?");
   confirmUppercase = confirm("Would you like to include uppercase letters in your password?");
   confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
