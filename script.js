@@ -34,7 +34,7 @@ var passphrase = "";
 
 //My arrays & empty arrys that will store my responses
 // var choices = "";
-var userChoice;
+var answers = [""];
 var numberCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -42,43 +42,50 @@ var specialCharacters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", 
 
 
 //The function used to generate the password
-function writePassword() {
+function generatePassword() {
   // var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  // var passwordText = document.querySelector("#password");
 
-  passwordText.value = password; //Should this value be value = passwordText.value instead????
+  // passwordText.value = password; //Should this value be value = passwordText.value instead????
 
   //Creating the equation that will prompt the user to input a value
-  var userChoice = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
+  var userLen = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
 
   //My variables that store the users response
-  var confirmNumbers = confirm("Would you like to include numbers in your password?");
-  var confirmUppercase = confirm("Would you like to include uppercase letters in your password?");
-  var confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
-  var confirmSpecial = confirm("Would you like to include special characters in your password?");
+  confirmNumbers = confirm("Would you like to include numbers in your password?");
+  confirmUppercase = confirm("Would you like to include uppercase letters in your password?");
+  confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
+  confirmSpecial = confirm("Would you like to include special characters in your password?");
 
 
   //If statements that will generate based on the selection of the user
+
+  if  (begin < 8 || begin > 128) {
+  //Checks users input to ensure it meets criteria...will prompt message if criteria is not met
+  alert("Please enter a vlaid length & try again!");
+  userLen = parseInt(prompt("Please enter a number between 8 & 128 & try again"));
+  }
+
   if (confirmNumbers) {
     // var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
-    userChoice = confirmNumbers;
+    answers = confirmNumbers;
   }
   if (confirmUppercase) {
     // var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
-    userChoice = confirmUppercase;
+    answers = confirmUppercase;
   }
   if (confirmLowercase) {
     // var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
-    userChoice = confirmLowercase;
+    answers = confirmLowercase;
   }
   if (confirmSpecial) {
     // var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
-    userChoice = confirmSpecial;
+    answers = confirmSpecial;
   }
   //For loop in order for this function to wrap around based on the user response
-  for (var i = 0; i < userChoice; i++) {
-    var randomPassword = Math.floor(Math.random() * userChoice.length);
-    passphrase.push=+userChoice[randomPassword];
+  for (var i = 0; i < userLen; i++) {
+    var randomPassword = Math.floor(Math.random() * answers.length);
+    passphrase.push=+answers[randomPassword];
 
   }
   //Adding the return after the loop in order to return our value
