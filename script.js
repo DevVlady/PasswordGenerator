@@ -29,6 +29,7 @@ var numbersRandom;
 var uppercaseRandom;
 var lowercaseRandom;
 var specialRandom;
+var passphrase = "";
 
 
 //My arrays & empty arrys that will store my responses
@@ -59,35 +60,29 @@ function writePassword() {
 
   //If statements that will generate based on the selection of the user
   if (confirmNumbers) {
-    var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
+    // var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
   }
   if (confirmUppercase) {
-    var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
+    // var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
   }
   if (confirmLowercase) {
-    var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
+    // var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
   }
   if (confirmSpecial) {
-    var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
+    // var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
   }
   //For loop in order for this function to wrap around based on the user response
   for (var i = 0; i < userChoice; i++) {
+    var randomPassword = Math.floor(Math.random() * userChoice.length);
+    passphrase.push=+userChoice[randomPassword];
 
   }
   //Adding the return after the loop in order to return our value
-  return choices;
+  return passphrase;
 
 
 
 }
-
-
-
-
-
-
-
-
 
 
 
