@@ -43,7 +43,7 @@ var specialCharacters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", 
 
 //The function used to generate the password
 function writePassword() {
-  var password = generatePassword();
+  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password; //Should this value be value = passwordText.value instead????
@@ -61,15 +61,19 @@ function writePassword() {
   //If statements that will generate based on the selection of the user
   if (confirmNumbers) {
     // var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
+    userChoice = confirmNumbers;
   }
   if (confirmUppercase) {
     // var uppercaseRandom = uppercaseCharacters(Math.floor(Math.random() * uppercaseCharacters.length));
+    userChoice = confirmUppercase;
   }
   if (confirmLowercase) {
     // var lowercaseRandom = lowercaseCharacters(Math.floor(Math.random() * lowercaseCharacters.length));
+    userChoice = confirmLowercase;
   }
   if (confirmSpecial) {
     // var specialRandom = specialCharacters(Math.floor(Math.random() * specialCharacters.length));
+    userChoice = confirmSpecial;
   }
   //For loop in order for this function to wrap around based on the user response
   for (var i = 0; i < userChoice; i++) {
