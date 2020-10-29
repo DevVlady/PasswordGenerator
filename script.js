@@ -24,6 +24,12 @@ var confirmUppercase;
 var confirmLowercase;
 var confirmSpecial;
 
+//My variables created for the random functions in the if statements
+var numbersRandom;
+var uppercaseRandom;
+var lowercaseRandom;
+var specialRandom;
+
 
 //My arrays & empty arrys that will store my responses
 var choices = "";
@@ -46,8 +52,13 @@ function writePassword() {
 
   //For loop in order for this function to wrap around based on the user response
   for (var i = 0; i < userChoice; i++) {
-    
+
   }
+  //If statements that will generate based on the selection of the user
+  if (confirmNumbers) {
+    var numbersRandom = numberCharacters(Math.floor(Math.random() * numberCharacters.length));
+  }
+
 
 
 }
