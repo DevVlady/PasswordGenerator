@@ -54,38 +54,22 @@ function generatePassword() {
   passwordText.value = password;
 
   //Creating the equation that will prompt the user to input a value
-  var userLen = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
+  var userLen
 
-  //Checks users input to ensure it meets criteria...will prompt message if criteria is not met
-  if  (userLen < 8 || userLen > 128) {
-    alert("Please enter a valid length & try again!");
-    userLen = parseInt(prompt("Please enter a number between 8 & 128 & try again"));
-    console.log(userLen);
-  }
 
   //Function to return the prompt should the user select length outside the paramters
-  function getUserAnswers() {
-    // var userLen = parseInt(prompt("Please choose the number of characters between 8 & 128 in order to begin!"));
     userLen = parseInt(prompt("Please enter a number between 8 & 128 & try again"));
 
     if  (userLen < 8 || userLen > 128) {
       alert("Please enter a valid length & try again!");
-      getUserAnswers();
+      return;
     }
-    if (askQuestions) {
+    else {
       confirmNumbers = confirm("Would you like to include numbers in your password?");
       confirmUppercase = confirm("Would you like to include uppercase letters in your password?");
       confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
       confirmSpecial = confirm("Would you like to include special characters in your password?");
     }
-  }
-
-  //My variables that store the users response
-
-  confirmNumbers = confirm("Would you like to include numbers in your password?");
-  confirmUppercase = confirm("Would you like to include uppercase letters in your password?");
-  confirmLowercase = confirm("Would you like to include lowercase letters in your password?");
-  confirmSpecial = confirm("Would you like to include special characters in your password?");
 
 
   if (confirmNumbers) {
@@ -122,4 +106,3 @@ function generatePassword() {
   //Adding the return after the loop in order to return our value
   return answers = temp2;
 }
-
