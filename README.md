@@ -6,4 +6,6 @@ Instructions: A user is asked the click on the generate button which will then p
 
 The technologies and programming languages used in this project are: HTML5, CSS3, & JavaScript.
 
+Deployed Site: https://vlady14.github.io/PasswordGenerator/
+
 ![image](https://user-images.githubusercontent.com/71519918/98504482-afdf2e80-221c-11eb-9e20-e7a194cd363a.png)
